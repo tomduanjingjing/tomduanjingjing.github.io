@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/tomduanjingjing">
-  <title>让盒子居中的四种方法 | Hexo</title>
+  <title>有关于标签li的问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="让盒子居中的方法第一种方法position+margin#box{          position: fixed;(也可以是absolute)         left : 50%;         margin-left: -盒子宽度的一半;         top:50%;         margin-top: -盒子高度的一半;     }">
+  <meta name="description" content="关于li标签的小问题在最近制作页面的时候,刚好需要用到li的内容进行横向排版所以把li标签设置成了inline-block,但是在设置了之后显示出来的结果却不尽人意,因为每个li之间都有大约8px的空白间隙.因为不太知道是什么原因所以上网搜索了一下.这是代码(效果复制代码自己运行可见): &amp;lt;!DOCTYPE html&amp;gt;          Document     li{ width:">
 <meta name="keywords" content="-布局">
 <meta property="og:type" content="article">
-<meta property="og:title" content="让盒子居中的四种方法">
-<meta property="og:url" content="https://github.com/tomduanjingjing/2016/05/17/让盒子居中的四种方法 - 副本/index.html">
+<meta property="og:title" content="有关于标签li的问题">
+<meta property="og:url" content="https://github.com/tomduanjingjing/2016/05/17/有关于标签li的问题/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="让盒子居中的方法第一种方法position+margin#box{          position: fixed;(也可以是absolute)         left : 50%;         margin-left: -盒子宽度的一半;         top:50%;         margin-top: -盒子高度的一半;     }">
-<meta property="og:updated_time" content="2017-11-08T02:57:10.272Z">
+<meta property="og:description" content="关于li标签的小问题在最近制作页面的时候,刚好需要用到li的内容进行横向排版所以把li标签设置成了inline-block,但是在设置了之后显示出来的结果却不尽人意,因为每个li之间都有大约8px的空白间隙.因为不太知道是什么原因所以上网搜索了一下.这是代码(效果复制代码自己运行可见): &amp;lt;!DOCTYPE html&amp;gt;          Document     li{ width:">
+<meta property="og:updated_time" content="2017-11-24T12:37:09.474Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="让盒子居中的四种方法">
-<meta name="twitter:description" content="让盒子居中的方法第一种方法position+margin#box{          position: fixed;(也可以是absolute)         left : 50%;         margin-left: -盒子宽度的一半;         top:50%;         margin-top: -盒子高度的一半;     }">
+<meta name="twitter:title" content="有关于标签li的问题">
+<meta name="twitter:description" content="关于li标签的小问题在最近制作页面的时候,刚好需要用到li的内容进行横向排版所以把li标签设置成了inline-block,但是在设置了之后显示出来的结果却不尽人意,因为每个li之间都有大约8px的空白间隙.因为不太知道是什么原因所以上网搜索了一下.这是代码(效果复制代码自己运行可见): &amp;lt;!DOCTYPE html&amp;gt;          Document     li{ width:">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -148,19 +148,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-让盒子居中的四种方法 - 副本" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-有关于标签li的问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      让盒子居中的四种方法
+      有关于标签li的问题
     </h1>
   
 
         
-        <a href="/tomdjj.github.io/2016/05/17/让盒子居中的四种方法 - 副本/" class="archive-article-date">
+        <a href="/tomdjj.github.io/2016/05/17/有关于标签li的问题/" class="archive-article-date">
   	<time datetime="2016-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-17</time>
 </a>
         
@@ -168,42 +168,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="让盒子居中的方法"><a href="#让盒子居中的方法" class="headerlink" title="让盒子居中的方法"></a>让盒子居中的方法</h2><h3 id="第一种方法position-margin"><a href="#第一种方法position-margin" class="headerlink" title="第一种方法position+margin"></a>第一种方法position+margin</h3><pre><code>#box{
-
-        position: fixed;(也可以是absolute)
-        left : 50%;
-        margin-left: -盒子宽度的一半;
-        top:50%;
-        margin-top: -盒子高度的一半;
-    }
-</code></pre><a id="more"></a>
-<h3 id="第二种方法position-margin的第二种方式"><a href="#第二种方法position-margin的第二种方式" class="headerlink" title="第二种方法position+margin的第二种方式"></a>第二种方法position+margin的第二种方式</h3><pre><code>#box{
-
-       position: fixed;(也可以是absolute)
-       top:0;
-       left: 0;
-       right: 0;
-       bottom:0;
-       margin: auto;
-   }
-</code></pre><h3 id="第三种方法需要借助伪元素来撑开高度"><a href="#第三种方法需要借助伪元素来撑开高度" class="headerlink" title="第三种方法需要借助伪元素来撑开高度"></a>第三种方法需要借助伪元素来撑开高度</h3><pre><code>html,body{
-       height:100%;
-   }
-   body{
-       text-align: center;
-   }
-   body::before{
-       /* 必备属性 */
-       content : &apos;&apos;;
-       display: inline-block;
-       height:100%;
-       vertical-align: middle;
-   }
-   #box{
-       vertical-align: middle;
-       display: inline-block;
-   }
-</code></pre><h3 id="第四种方法伸缩盒子布局"><a href="#第四种方法伸缩盒子布局" class="headerlink" title="第四种方法伸缩盒子布局"></a>第四种方法伸缩盒子布局</h3><pre><code>html,body{
+        <h2 id="关于li标签的小问题"><a href="#关于li标签的小问题" class="headerlink" title="关于li标签的小问题"></a>关于li标签的小问题</h2><h3 id="在最近制作页面的时候-刚好需要用到li的内容进行横向排版所以把li标签设置成了inline-block-但是在设置了之后显示出来的结果却不尽人意-因为每个li之间都有大约8px的空白间隙-因为不太知道是什么原因所以上网搜索了一下"><a href="#在最近制作页面的时候-刚好需要用到li的内容进行横向排版所以把li标签设置成了inline-block-但是在设置了之后显示出来的结果却不尽人意-因为每个li之间都有大约8px的空白间隙-因为不太知道是什么原因所以上网搜索了一下" class="headerlink" title="在最近制作页面的时候,刚好需要用到li的内容进行横向排版所以把li标签设置成了inline-block,但是在设置了之后显示出来的结果却不尽人意,因为每个li之间都有大约8px的空白间隙.因为不太知道是什么原因所以上网搜索了一下."></a>在最近制作页面的时候,刚好需要用到li的内容进行横向排版所以把li标签设置成了inline-block,但是在设置了之后显示出来的结果却不尽人意,因为每个li之间都有大约8px的空白间隙.因为不太知道是什么原因所以上网搜索了一下.</h3><p>这是代码(效果复制代码自己运行可见):</p>
+<p>&lt;!DOCTYPE html&gt;</p>
+<p><html lang="en"></html></p>
+<p><head><br>    <meta charset="UTF-8"><br>    <title>Document</title><br></head></p>
+<p><style type="text/css"><br>    li{ width: 100px;height: 100px;display: inline-block;}<br>    .b1{background: red;}<br>    .b2{background: blue;}<br>    .b3{background: yellow;}<br>    .b4{background: black;}<br></style></p>
+<p><body><br>    <ul><br>        <li class="b1"></li><br>        <li class="b2"></li><br>        <li class="b3"></li><br>        <li class="b4"></li><br>    </ul><br></body><br><br><a id="more"></a></p>
+<h3 id="在网上找到的资料大概就是因为浏览器的默认行为把inline元素之间的空白字符-这其中包括空格换行等-渲染成了一个空格-也就是我们在编写代码的时候会根据排版将多个li换行-那这时候这些换行就被浏览器默认的认为是一个空格-所以我们就有了刚刚上面的问题"><a href="#在网上找到的资料大概就是因为浏览器的默认行为把inline元素之间的空白字符-这其中包括空格换行等-渲染成了一个空格-也就是我们在编写代码的时候会根据排版将多个li换行-那这时候这些换行就被浏览器默认的认为是一个空格-所以我们就有了刚刚上面的问题" class="headerlink" title="在网上找到的资料大概就是因为浏览器的默认行为把inline元素之间的空白字符(这其中包括空格换行等)渲染成了一个空格,也就是我们在编写代码的时候会根据排版将多个li换行,那这时候这些换行就被浏览器默认的认为是一个空格,所以我们就有了刚刚上面的问题."></a>在网上找到的资料大概就是因为浏览器的默认行为把inline元素之间的空白字符(这其中包括空格换行等)渲染成了一个空格,也就是我们在编写代码的时候会根据排版将多个li换行,那这时候这些换行就被浏览器默认的认为是一个空格,所以我们就有了刚刚上面的问题.</h3><h3 id="解决方法一-浮动"><a href="#解决方法一-浮动" class="headerlink" title="解决方法一:浮动"></a>解决方法一:浮动</h3><p>我们可以给li设置浮动这样就会清除这之间的空隙,但是这也仅适用在一些允许使用浮动的布局里,如果遇到一些不可以切换的地方如左右切换的焦点图,那我们就不能使用浮动这一方法来解决了.</p>
+<p>解决方法二:把li代码写在一排</p>
+<p>因为是li换行导致的问题,所以把换行给去掉那就可以解决了,但是这并不是最好的解决方案,因为这样写出来的代码并不美观,尤其是代码特别多的时候会造成代码混乱从而导致代码质量下降.</p>
+<p>解决方法三:将ul内的font-size设为0</p>
+<p>即:</p>
+<pre><code>ul{font-size};
+</code></pre><p>此时li之间的空隙也就解决了,但是因为是将ul标签的font-size设置为0,那在这标签里其他的文字就不见了,因为其尺寸被设没了,我们只好重新去设定这些字符尺寸,那么这样是在编写代码的时候很不好的,因为会降低我们编写代码的效率.</p>
+<h3 id="解决方法四-设置字符的间隔"><a href="#解决方法四-设置字符的间隔" class="headerlink" title="解决方法四:设置字符的间隔"></a>解决方法四:设置字符的间隔</h3><p>本来方法三是可以解决这些问题的,但是因为方法三会降低编写代码时候的效率,同时这个方法在Safari浏览器依然出现间隙空白,所以我们只能再换一种方法,就是设置字符的间隔.<br>我们首先在ul标签里设置,如下:</p>
+<p>ul{letter-spacing:-5px}<br>这里我在网上看到的资料是-4,但实际上自己测试的时候是-5,不知道是不是不同的显示器显示的效果不一样还是浏览器的问题,所以设置这个的时候如果仍然有空隙那可以再将值改一下,那么设置完这个值后我们就应该设置这个ul下的li的字符间隙为normal,这样避免li的字符会出现重叠的事件发生.<br>ul li{letter-spacing:normal}</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>以上方法个人觉得一和四为最优解决方法,但是我们在使用这两个方法的时候要视情况而定,在允许使用浮动的情况下就使用浮动来解决,毕竟浮动这个方法只用一句代码,速度更快而且不用微调之间的间隙,第四个方法则适用在不能使用浮动的情况下,同时在使用第四个方法的时候要记得设置li字符的间隙为正常,否则会出问题,即是出现文字重叠的现象,上面的代码你们可以copy下来更改着试试.</p>
+<h3 id="第四种方法伸缩盒子布局"><a href="#第四种方法伸缩盒子布局" class="headerlink" title="第四种方法伸缩盒子布局"></a>第四种方法伸缩盒子布局</h3><pre><code>html,body{
        height: 100%;
    }
    body{
@@ -284,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/tomduanjingjing/2016/05/17/让盒子居中的四种方法 - 副本/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/tomduanjingjing/2016/05/17/有关于标签li的问题/" alt="微信分享二维码">
     </div>
 </div>
 
