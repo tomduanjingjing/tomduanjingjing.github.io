@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/tomduanjingjing">
-  <title>Archives: 2016/5 | Hexo</title>
+  <title>first-child和first-of-type的区别 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://github.com/tomduanjingjing/archives/2016/05/index.html">
+  <meta name="description" content="first-child和first-of-type的区别first-child是CSS2中定义的选择器，从字面意思也可以理解，就是第一个子元素。不如有段代码：          第一个子元素      第二个子元素      第三个子元素      第四个子元素">
+<meta name="keywords" content="-布局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="first-child和first-of-type的区别">
+<meta property="og:url" content="https://github.com/tomduanjingjing/2016/07/10/first-child和first-of-type的区别/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="first-child和first-of-type的区别first-child是CSS2中定义的选择器，从字面意思也可以理解，就是第一个子元素。不如有段代码：          第一个子元素      第二个子元素      第三个子元素      第四个子元素">
+<meta property="og:updated_time" content="2017-11-25T02:09:20.395Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="first-child和first-of-type的区别">
+<meta name="twitter:description" content="first-child和first-of-type的区别first-child是CSS2中定义的选择器，从字面意思也可以理解，就是第一个子元素。不如有段代码：          第一个子元素      第二个子元素      第三个子元素      第四个子元素">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,36 +148,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-first-child和first-of-type的区别" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      first-child和first-of-type的区别
+    </h1>
+  
+
+        
+        <a href="/tomdjj.github.io/2016/07/10/first-child和first-of-type的区别/" class="archive-article-date">
+  	<time datetime="2016-07-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-10</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="first-child和first-of-type的区别"><a href="#first-child和first-of-type的区别" class="headerlink" title="first-child和first-of-type的区别"></a>first-child和first-of-type的区别</h3><p>first-child是CSS2中定义的选择器，从字面意思也可以理解，就是第一个子元素。不如有段代码：<br>    <div><br>      <p>第一个子元素</p><br>      <h1>第二个子元素</h1><br>      <span>第三个子元素</span><br>      <span>第四个子元素</span><br>    </div><br><a id="more"></a><br>p:first-child 匹配到的是p元素，因为p元素是div的第一个子元素；</p>
+<p>h1:first-child 匹配不到任何元素，因为在这里h1是div的第二个子元素，而不是第一个；</p>
+<p>span:first-child 匹配不到任何元素，因为span和h1一样，都不是div的第一个子元素；</p>
+<p>first-of-type：是CSS3中定义的，这个和first-child有什么区别呢？还是这段代码：</p>
+<pre><code> &lt;div&gt;
+  &lt;p&gt;第一个子元素&lt;/p&gt;
+  &lt;h1&gt;第二个子元素&lt;/h1&gt;
+  &lt;span&gt;第三个子元素&lt;/span&gt;
+  &lt;span&gt;第四个子元素&lt;/span&gt;
+&lt;/div&gt;
+</code></pre><p>p:first-of-type：匹配到的是p元素，因为p是div所以类型为p的子元素中的第一个；</p>
+<p>h1:first-of-type：匹配到的是h1元素，因为h1是div所以类型为h1的子元素中的第一个；</p>
+<p>span:first-of-type：匹配到的是第一个span元素，这里div有俩个span子元素，匹配到第一个；</p>
+<p>所以，通过以上俩个例子可以得出结论：</p>
+<p>：first-child：匹配的是某父元素的第一个子元素，可以说是结构上的第一个子元素。</p>
+<p>：first-of-type：匹配的是某父元素相同类型子元素中的第一个，比如span：first-of-type，就是所以类型为span的子元素中的第一个。这里不再限制是第一个子元素了，只要是该类型元素的第一个就行了。</p>
+<p>同样类型的选择器还有：last-child 和 last-of-type；nth-child（n）和：nth-of-type（n）也可以这样去理解。就不去过多的赘述了.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/tomdjj.github.io/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/20/CSS中优先级的问题/" class="archive-article-date">
-  	<time datetime="2016-05-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/20/CSS中优先级的问题/">CSS中优先级的问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -184,171 +204,115 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/tomduanjingjing/2016/07/10/first-child和first-of-type的区别/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/19/CSS之margin的小性子/" class="archive-article-date">
-  	<time datetime="2016-05-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-19</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/tomdjj.github.io/2016/07/27/h5表单新属性/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          h5表单新属性
+        
+      </div>
+    </a>
+  
+  
+    <a href="/tomdjj.github.io/2016/06/20/CSS3变形与动画/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS3变形与动画</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/19/CSS之margin的小性子/">CSS之margin的小性子</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/19/CSS中visibility属性中的值collapse/" class="archive-article-date">
-  	<time datetime="2016-05-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/19/CSS中visibility属性中的值collapse/">CSS中visibility属性中的值collapse</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/17/有关于标签li的问题/" class="archive-article-date">
-  	<time datetime="2016-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/17/有关于标签li的问题/">有关于标签li的问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/17/让盒子居中的四种方法/" class="archive-article-date">
-  	<time datetime="2016-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/17/让盒子居中的四种方法/">让盒子居中的四种方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -371,8 +335,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

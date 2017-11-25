@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/tomduanjingjing">
-  <title>Archives: 2016/5 | Hexo</title>
+  <title>h5表单新属性 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://github.com/tomduanjingjing/archives/2016/05/index.html">
+  <meta name="description" content="h5表单新属性novalidate不验证表单,用于form标签,还以用于input,type属性url,email,tel.. input新属性autocomplete  输入框的自动补全； autofocus       页面加载完毕后自动获取焦点；">
+<meta name="keywords" content="-布局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="h5表单新属性">
+<meta property="og:url" content="https://github.com/tomduanjingjing/2016/07/27/h5表单新属性/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="h5表单新属性novalidate不验证表单,用于form标签,还以用于input,type属性url,email,tel.. input新属性autocomplete  输入框的自动补全； autofocus       页面加载完毕后自动获取焦点；">
+<meta property="og:updated_time" content="2017-11-25T02:18:09.072Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="h5表单新属性">
+<meta name="twitter:description" content="h5表单新属性novalidate不验证表单,用于form标签,还以用于input,type属性url,email,tel.. input新属性autocomplete  输入框的自动补全； autofocus       页面加载完毕后自动获取焦点；">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,36 +148,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-h5表单新属性" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      h5表单新属性
+    </h1>
+  
+
+        
+        <a href="/tomdjj.github.io/2016/07/27/h5表单新属性/" class="archive-article-date">
+  	<time datetime="2016-07-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-27</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="h5表单新属性"><a href="#h5表单新属性" class="headerlink" title="h5表单新属性"></a>h5表单新属性</h2><h4 id="novalidate"><a href="#novalidate" class="headerlink" title="novalidate"></a>novalidate</h4><p>不验证表单,用于form标签,还以用于input,type属性url,email,tel..</p>
+<h3 id="input新属性"><a href="#input新属性" class="headerlink" title="input新属性"></a>input新属性</h3><p>autocomplete  输入框的自动补全；</p>
+<p>autofocus       页面加载完毕后自动获取焦点；<br><a id="more"></a><br>form          指定输入框属于那一个表单，输入框不在<form>内部也会进行提交；</form></p>
+<p>multiple       文件选择框为多选；(<input type="’file’" multiple>)</p>
+<p>pattern       输入框验证的正则表达式;  [0-9]{6} 输入0-9直接的字符，并且字符串长度为6位。</p>
+<p>placeholder    输入框提示，描述输入域所期待的值；</p>
+<p>required      输入框是否是必填项；    </p>
+<p>formnovalidate   设置给提交按钮可以跳过浏览器表单验证（input type=’submit’ formonvalidate）</p>
+<h3 id="aria-增加可访问性"><a href="#aria-增加可访问性" class="headerlink" title="aria-* 增加可访问性"></a>aria-* 增加可访问性</h3><p>在构建Web应用时，我们必须确保所有用户都能访问，这其中就包括那些需要辅助技术（屏幕阅读器）才能访问的用户（盲人或残障人士）。</p>
+<p>现在应用结构越发复杂，除了面屏的html标签外，还有漫天飞舞的CSS和JS，要想迎合辅助技术的难度越发增大。为了解决这个问题，人们制定了WAI（Web Accessibility Initiative，Web可访问性倡议）和ARIA标准及规范。</p>
+<p>WAI-ARIA规范旨在通过对HTML文档作者提供的可访问性信息加以扩展来改善Web应用。ARIA角色、关系、状态及属性，可为Web应用定义出能够被屏幕阅读器这样的辅助技术所理解的工作方式。例如：</p>
+<p>可视化设备：用户名：<br>    <input type="’username’" name="’username’"><br>（闭上眼睛，内容对于你而言是不可见的，但可以通过辅助设备读取出来给你听，当鼠标移入到input输入框的时候，辅助设备就会获取aria-label的值读给听.）<br>可视化设备：<br>    <div class="’button" disabled’="">点我哥哥</div><br>屏幕阅读设备：<br>    <div class="’button" disabled’="" role="’button’" aria-disabled="’true’">点我哥哥</div><br>HTML5规范现已明确声明，可以按照ARIA规范所描述的那样，在HTML元素上使用ARIA的role和aria-*属性。常见角色有：<br>    button,checkbox,menuitem,menuitemcheckbox,menuitemradio,tab或treeitem。</p>
+<h3 id="data-自定义数据"><a href="#data-自定义数据" class="headerlink" title="data-* 自定义数据"></a>data-* 自定义数据</h3><p>data-*是一种以“键（key）/值（value）”对方式来描述HTML TAG的扩展属性。</p>
+<pre><code>&lt;div data-name=”张三疯”&gt;&lt;/div&gt;
+</code></pre><p>以前在TAG上定义一个属性，直接写上后，很多人都无法区分是否是原生属性（这会影响到取值问题）.在HTML5中添加了data-*的方式来自定义属性，语法：<br>    &lt;标签 data-键=值 data-键=值 /&gt;<br>js取值:el.dataset[键]    </p>
+<h3 id="contenteditable-内容编辑"><a href="#contenteditable-内容编辑" class="headerlink" title="contenteditable 内容编辑"></a>contenteditable 内容编辑</h3><p>contentEditable：属性可以打开某些元素（一般为双标签）编辑标签中内容。</p>
+<p>HTML代码方式设置<br>     <html contenteditable=""><br>    …..<br>    </html><br>或者某个具体的标签<br>        <div id="’text’" contenteditable="" style="’border:1px" solid="" red;height:300px’=""><br>    </div><br>JS编码方式设置</p>
+<p>document.body.contentEditable = true ; // 默认为false<br>该属性可以让我们在线编辑网页内容，虽然看似很牛逼的一个属性，但是我们实际开发中，并不会使用，一般直接使用第三方的在线编辑器插件即可。</p>
+<h3 id="tabIndex-tab键控制"><a href="#tabIndex-tab键控制" class="headerlink" title="tabIndex tab键控制"></a>tabIndex tab键控制</h3><p>tabIndex虽然是HTML5新属性， 其实在HTML4就已经存在了，其功能提高了用户体验。tab键可以控制窗口或页面中获取焦点，设置tabIndex可以控制tab键获取焦点的元素。<br>    <form><br>    <input type="text" name="username" id="" tabindex="1"><br>    <a href="www.baidu.com" tabindex="-1">注册账号</a><br>    <input type="password" name="password" tabindex="2"><br>    </form></p>
+<h3 id="rel链接关系"><a href="#rel链接关系" class="headerlink" title="rel链接关系"></a>rel链接关系</h3><p>rel 属性指定链接的关系，常见如下：</p>
+<p>link rel=”stylesheet” // css样式引入<br>a rel=”nofellow” //SEO优化</p>
+<p>rel=same表示待链接的文件与此文件相同，rel=next表示待链接的文件为下一页，rel＝parent表示本文件为待链接文件的父文件，rel=previous则表示待链接的文件为上一页。<br>    <link rel="stylesheet" href="style.css"><br>    <link rel="shortcut icon" href="favicon.ico"><br>    …</p>
+<pre><code>&lt;a rel=&quot;same&quot; href=&quot;http://www.itsource.com/index.html&quot;&gt;首页&lt;/a&gt;
+&lt;a rel=&quot;previous&quot; href=&quot;http://www.itsource.com/index.html&quot;&gt;上一页&lt;/a&gt;
+&lt;a rel=&quot;next&quot; href=&quot;http://www.itsource.com/index.html&quot;&gt;下一页&lt;/a&gt;
+
+
+&lt;link rel=&quot;manifest&quot; href=&quot;http://myblog.com/favicons/manifest.json&quot;&gt;
+
+&lt;a rel=&quot;archives&quot; href=&quot;http://myblog.com/archives&quot;&gt;old posts&lt;/a&gt;
+&lt;a rel=&quot;external&quot; href=&quot;http://notmysite.com&quot;&gt;tutorial&lt;/a&gt;
+&lt;a rel=&quot;license&quot; href=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;&gt;license&lt;/a&gt;
+&lt;a rel=&quot;nofollow&quot; href=&quot;http://notmysite.com/sample&quot;&gt;wannabe&lt;/a&gt;
+&lt;a rel=&quot;tag&quot; href=&quot;http://myblog.com/category/games&quot;&gt;games posts&lt;/a&gt;
+</code></pre><p>常见链接</p>
+<p>stylesheet    文档的外部样式表<br>start    集合中的第一个文档<br>next    集合中的下一个文档<br>prev    集合中的前一个文档<br>contents    文档目录<br>index    文档索引<br>copyright    包含版权信息的文档<br>licence    一般用于文献，表示许可证的含义<br>tag    标签集合<br>icon 图标<br>chapter    文档的章<br>section    文档的节<br>subsection    文档的子段<br>appendix    文档附录<br>help    帮助文档<br>bookmark    相关文档<br>friend    友情链接<br>nofollow    用于指定搜索引擎不要跟踪链接</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/tomdjj.github.io/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/20/CSS中优先级的问题/" class="archive-article-date">
-  	<time datetime="2016-05-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/20/CSS中优先级的问题/">CSS中优先级的问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -184,171 +223,115 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/tomduanjingjing/2016/07/27/h5表单新属性/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/19/CSS之margin的小性子/" class="archive-article-date">
-  	<time datetime="2016-05-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-19</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/tomdjj.github.io/2016/09/05/深入浅出JS中的原型/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          深入浅出JS中的原型
+        
+      </div>
+    </a>
+  
+  
+    <a href="/tomdjj.github.io/2016/07/10/first-child和first-of-type的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">first-child和first-of-type的区别</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/19/CSS之margin的小性子/">CSS之margin的小性子</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/19/CSS中visibility属性中的值collapse/" class="archive-article-date">
-  	<time datetime="2016-05-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/19/CSS中visibility属性中的值collapse/">CSS中visibility属性中的值collapse</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/17/有关于标签li的问题/" class="archive-article-date">
-  	<time datetime="2016-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/17/有关于标签li的问题/">有关于标签li的问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/17/让盒子居中的四种方法/" class="archive-article-date">
-  	<time datetime="2016-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/17/让盒子居中的四种方法/">让盒子居中的四种方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -371,8 +354,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

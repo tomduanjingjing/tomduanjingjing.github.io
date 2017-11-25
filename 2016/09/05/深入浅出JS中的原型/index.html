@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/tomduanjingjing">
-  <title>Archives: 2016/5 | Hexo</title>
+  <title>深入浅出JS中的原型 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://github.com/tomduanjingjing/archives/2016/05/index.html">
+  <meta name="description" content="javascript中原型的深入浅出什么是原型在JavaScript中，原型也是一个对象，通过原型可以实现对象的属性继承，JavaScript的对象中都包含了一个” [[Prototype]]”内部属性，这个属性所对应的就是该对象的原型。">
+<meta name="keywords" content="-JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深入浅出JS中的原型">
+<meta property="og:url" content="https://github.com/tomduanjingjing/2016/09/05/深入浅出JS中的原型/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="javascript中原型的深入浅出什么是原型在JavaScript中，原型也是一个对象，通过原型可以实现对象的属性继承，JavaScript的对象中都包含了一个” [[Prototype]]”内部属性，这个属性所对应的就是该对象的原型。">
+<meta property="og:updated_time" content="2017-11-25T02:24:00.035Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="深入浅出JS中的原型">
+<meta name="twitter:description" content="javascript中原型的深入浅出什么是原型在JavaScript中，原型也是一个对象，通过原型可以实现对象的属性继承，JavaScript的对象中都包含了一个” [[Prototype]]”内部属性，这个属性所对应的就是该对象的原型。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,212 +148,208 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-深入浅出JS中的原型" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      深入浅出JS中的原型
+    </h1>
+  
+
+        
+        <a href="/tomdjj.github.io/2016/09/05/深入浅出JS中的原型/" class="archive-article-date">
+  	<time datetime="2016-09-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-05</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="javascript中原型的深入浅出"><a href="#javascript中原型的深入浅出" class="headerlink" title="javascript中原型的深入浅出"></a>javascript中原型的深入浅出</h2><h3 id="什么是原型"><a href="#什么是原型" class="headerlink" title="什么是原型"></a>什么是原型</h3><p>在JavaScript中，原型也是一个对象，通过原型可以实现对象的属性继承，JavaScript的对象中都包含了一个” [[Prototype]]”内部属性，这个属性所对应的就是该对象的原型。<br><a id="more"></a></p>
+<h3 id="什么是prototype以及proto"><a href="#什么是prototype以及proto" class="headerlink" title="什么是prototype以及proto:"></a>什么是prototype以及proto:</h3><p>proto:任何一个对象Object都有proto，它是每一个对象的私有属性，是天生自带的。</p>
+<p>prototype:不是任何对象都有prototype，只有构造函数有prototype，是后天赋予的。</p>
+<p>Prototype作为对象的内部属性，是不能被直接访问的。所以为了方便查看一个对象的原型，Firefox和Chrome中提供了”proto“这个非标准（不是所有浏览器都支持）的访问器（ECMA引入了标准对象原型访问器”Object.getPrototype(object)”）。</p>
+<h3 id="什么是原型链查找"><a href="#什么是原型链查找" class="headerlink" title="什么是原型链查找"></a>什么是原型链查找</h3><p>调用一个对象的属性或方法，一但这个对象中没有，就去这个对象的proto中查找。这个对象的proto指向自己构造函数的prototype属性<br>来看个例子:<br>    var Person = function () {<br>       this.sleep = ‘Zzzzz…’<br>    }<br>    Person.prototype.sayHello = function () {<br>        console.log(‘hello world’);<br>    }<br>    var zhangsan = new Person();<br>    zhangsan.sayHello();<br>其实zhangsan这个对象下面只有一个sleep属性，是没有sayHello方法的。<br>但是通过原型链查找会查zhangsan.proto也就是查找它的构造函数的Person.prototype，Person.prototype下有sayHello这个方法，所以会在控制台输出hello world.</p>
+<h3 id="几种继承方式"><a href="#几种继承方式" class="headerlink" title="几种继承方式"></a>几种继承方式</h3><h4 id="纯原型链继承"><a href="#纯原型链继承" class="headerlink" title="纯原型链继承"></a>纯原型链继承</h4><pre><code> function Father() {
+    this.likeFood= [&apos;牛排&apos;,&apos;饺子&apos;,&apos;啤酒&apos;,&apos;可乐&apos;]
+}
+Father.prototype.saylikeFood = function () {
+    console.log(this.likeFood);  
+};
+function Son() {
+}
+Son.prototype = new Father();
+var zhangsan = new Son();
+zhangsan.likeFood.push(&apos;西瓜&apos;);
+zhangsan.saylikeFood(); // [&quot;牛排&quot;, &quot;饺子&quot;, &quot;啤酒&quot;, &quot;可乐&quot;, &quot;西瓜&quot;]
+</code></pre><p>这就是纯原型链的继承方式，其实说白了就是把继承的对象的prototype等于继承自构造函数的实例。<br>但是这样的方式有问题。接着上面的代码的后面我们再写：<br>    var lisi = new Son();<br>    lisi.saylikeFood(); // [“牛排”, “饺子”, “啤酒”, “可乐”, “西瓜”]<br>看出问题了吧，zhangsan直接修改了其构造函数的likeFood，<br>导致我们再实例的对象也收到了修改的影响.</p>
+<h3 id="借用构造函数继承"><a href="#借用构造函数继承" class="headerlink" title="借用构造函数继承"></a>借用构造函数继承</h3><pre><code> function Father(name) {
+this.name = name;
+this.sayName = function () {
+    console.log(this.name);
+}
+}
+function Son(name, age) {
+    Father.call(this, name);
+    this.age = age;
+}
+var zhangsan = new Son(&apos;zhangsan&apos;, 17);
+</code></pre><p>这种继承方式并没有利用到原型以及原型链的概念，它主要利用call的特性，call的第一个参数传入this，后面的参数传入函数所需的参数。<br>这种方式归根结底其实就是在实例一个对象的时候，向这个对象的上面添加所需的属性和方法。</p>
+<p>但是其实这种方式也有问题，什么问题呢？</p>
+<p>按照这种方式，每次new一个对象，就是实例化一个对象，都会向这个对象身上添加一堆属性和方法。<br>添加属性是没问题的，但是每次在对象身上添加的方法，这个函数就要重写一次。<br>函数不能进行复用，这就是最大的问题！</p>
+<h3 id="组合继承"><a href="#组合继承" class="headerlink" title="组合继承"></a>组合继承</h3><p>组合继承其实分别是拥有以上两种方法的优点，同时也规避了以上两种方法的缺点。<br>这种方法的应用是最广泛的，是最普遍的，举个栗子来看一下：</p>
+<pre><code> //定义父类
+   function father(name){
+    this.name = name;
+    this.colors = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;];
+}
+father.prototype.sayName = function(){
+    console.log(this.name);
+};
+//定义子类
+function son(name,age){
+    father.call(this,name);
+    this.age = age;
+}
+//真正的继承：子类原型是父类原型的实例
+son.prototype = new father();
+son.prototype.constructor = son;
+son.prototype.sayAge = function(){
+    console.log(this.age);
+};
+var i = new son(&quot;aaa&quot;,11);
+i.colors.push(&quot;black&quot;);
+console.log(i.colors);
+i.sayName();
+i.sayAge();
+var i2 = new son(&quot;bbb&quot;,12);
+console.log(i2.colors);
+i2.sayName();
+i2.sayAge();
+</code></pre><p>最后再小小的总结一下:</p>
+<p>【prototype是类的】原型对象,其本身是一个对象，只要function定义的函数都具备该属性，用于对类（构造函数）进行功能扩展<br>将公共方法全部都在原型上定义，所以实例化出来的对象都对该方法进行【引用】，解决方法过载导致内存资源浪费问题.<br>可以利用原型对现有功能进行扩充。所有的类都可以扩展。(Object、String、Array、Number…)<br>proto 就是对类的 prototype原型对象的引用<br>【proto 是对象的】，在类实例化出来的对象上出现，对类的原型对象进行的引用</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/tomdjj.github.io/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/20/CSS中优先级的问题/" class="archive-article-date">
-  	<time datetime="2016-05-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/20/CSS中优先级的问题/">CSS中优先级的问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-JS</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/tomduanjingjing/2016/09/05/深入浅出JS中的原型/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/19/CSS之margin的小性子/" class="archive-article-date">
-  	<time datetime="2016-05-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/tomdjj.github.io/2016/07/27/h5表单新属性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">h5表单新属性</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/19/CSS之margin的小性子/">CSS之margin的小性子</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/19/CSS中visibility属性中的值collapse/" class="archive-article-date">
-  	<time datetime="2016-05-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/19/CSS中visibility属性中的值collapse/">CSS中visibility属性中的值collapse</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/17/有关于标签li的问题/" class="archive-article-date">
-  	<time datetime="2016-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/17/有关于标签li的问题/">有关于标签li的问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/17/让盒子居中的四种方法/" class="archive-article-date">
-  	<time datetime="2016-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/17/让盒子居中的四种方法/">让盒子居中的四种方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -371,8 +372,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/tomduanjingjing">
-  <title>Archives: 2016/5 | Hexo</title>
+  <title>CSS中优先级的问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://github.com/tomduanjingjing/archives/2016/05/index.html">
+  <meta name="description" content="CSS中优先级的问题CSS优先级在平时做布局的时候总是会遇到一些明明都是正确的代码样式,却无法显示出来,这时候可能就要看看你的样式写的时候是否存在优先级的问题了. 样式的优先级多重样式（Multiple Styles）：如果外部样式、内部样式和内联样式同时应用于同一个元素，就是使多重样式的情况。一般情况下，优先级如下：外部样式 &amp;lt;内部样式 &amp;lt;内联样式有个例外的情况，就是如果外部样式放在">
+<meta name="keywords" content="-布局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS中优先级的问题">
+<meta property="og:url" content="https://github.com/tomduanjingjing/2016/05/20/CSS中优先级的问题/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="CSS中优先级的问题CSS优先级在平时做布局的时候总是会遇到一些明明都是正确的代码样式,却无法显示出来,这时候可能就要看看你的样式写的时候是否存在优先级的问题了. 样式的优先级多重样式（Multiple Styles）：如果外部样式、内部样式和内联样式同时应用于同一个元素，就是使多重样式的情况。一般情况下，优先级如下：外部样式 &amp;lt;内部样式 &amp;lt;内联样式有个例外的情况，就是如果外部样式放在">
+<meta property="og:updated_time" content="2017-11-25T01:39:18.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="CSS中优先级的问题">
+<meta name="twitter:description" content="CSS中优先级的问题CSS优先级在平时做布局的时候总是会遇到一些明明都是正确的代码样式,却无法显示出来,这时候可能就要看看你的样式写的时候是否存在优先级的问题了. 样式的优先级多重样式（Multiple Styles）：如果外部样式、内部样式和内联样式同时应用于同一个元素，就是使多重样式的情况。一般情况下，优先级如下：外部样式 &amp;lt;内部样式 &amp;lt;内联样式有个例外的情况，就是如果外部样式放在">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,36 +148,111 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-CSS中优先级的问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      CSS中优先级的问题
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/tomdjj.github.io/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/20/CSS中优先级的问题/" class="archive-article-date">
+
+        
+        <a href="/tomdjj.github.io/2016/05/20/CSS中优先级的问题/" class="archive-article-date">
   	<time datetime="2016-05-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-20</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/20/CSS中优先级的问题/">CSS中优先级的问题</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSS中优先级的问题"><a href="#CSS中优先级的问题" class="headerlink" title="CSS中优先级的问题"></a>CSS中优先级的问题</h2><h3 id="CSS优先级"><a href="#CSS优先级" class="headerlink" title="CSS优先级"></a>CSS优先级</h3><p>在平时做布局的时候总是会遇到一些明明都是正确的代码样式,却无法显示出来,这时候可能就要看看你的样式写的时候是否存在优先级的问题了.</p>
+<h3 id="样式的优先级"><a href="#样式的优先级" class="headerlink" title="样式的优先级"></a>样式的优先级</h3><p>多重样式（Multiple Styles）：如果外部样式、内部样式和内联样式同时应用于同一个元素，就是使多重样式的情况。<br>一般情况下，优先级如下：<br>外部样式 &lt;内部样式 &lt;内联样式<br>有个例外的情况，就是如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。</p>
+<p>示例如下：<br>    <head><br>        <style type="text/css"><br>          /<em> 内部样式 </em>/<br>          h3{color:green;}<br>        </style></head></p>
+<pre><code>    &lt;!-- 外部样式 style.css --&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;/&gt;
+    &lt;!-- 设置：h3{color:blue;} --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h3&gt;测试！&lt;/h3&gt;
+&lt;/body&gt;
+</code></pre><a id="more"></a>
+<h3 id="选择器的优先权"><a href="#选择器的优先权" class="headerlink" title="选择器的优先权"></a>选择器的优先权</h3><p>先来看各个选择器占的权值</p>
+<p>1.内联样式表的权值最高 1000；</p>
+<p>2.ID 选择器的权值为 100</p>
+<p>3.Class 类选择器的权值为 10</p>
+<p>4.HTML 标签选择器的权值为 1</p>
+<pre><code> &lt;html&gt;
+      &lt;head&gt;
+        &lt;style type=&quot;text/css&quot;&gt;
+            #redP p {
+                 /* 权值 = 100+1=101 */
+                 color:#F00;  /* 红色 */
+            }
 
-        <div class="article-info info-on-right">
-          
+            #redP .red em {
+                 /* 权值 = 100+10+1=111 */
+                 color:#00F; /* 蓝色 */
+
+            }
+
+            #redP p span em {
+                 /* 权值 = 100+1+1+1=103 */
+                 color:#FF0;/*黄色*/
+            }
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+         &lt;div id=&quot;redP&quot;&gt;
+            &lt;p class=&quot;red&quot;&gt;red
+               &lt;span&gt;&lt;em&gt;em red&lt;/em&gt;&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;red&lt;/p&gt;
+         &lt;/div&gt;
+      &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h4 id="结果：-标签内的数据显示为蓝色。"><a href="#结果：-标签内的数据显示为蓝色。" class="headerlink" title="结果： 标签内的数据显示为蓝色。"></a>结果： 标签内的数据显示为蓝色。</h4><h3 id="CSS-优先级法则"><a href="#CSS-优先级法则" class="headerlink" title="CSS 优先级法则"></a>CSS 优先级法则</h3><p>A 选择器都有一个权值，权值越大越优先；</p>
+<p>B 当权值相等时，后出现的样式表设置要优于先出现的样式表设置；</p>
+<p>C 创作者的规则高于浏览者：即网页编写者设置的CSS 样式的优先权高于浏览器所设置的样式；</p>
+<p>D 继承的CSS 样式不如后来指定的CSS 样式；</p>
+<p>E 在同一组属性设置中标有“!important”规则的优先级最大；示例如下：</p>
+<pre><code> &lt;html&gt;
+  &lt;head&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+     #redP p{
+        /*两个color属性在同一组*/
+        color:#00f !important; /* 优先级最大 */
+        color:#f00;
+     }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+     &lt;div id=&quot;redP&quot;&gt;
+       &lt;p&gt;color&lt;/p&gt;
+       &lt;p&gt;color&lt;/p&gt;
+     &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>结果：在Firefox 下显示为蓝色；在IE 6 下显示为红色；<br>再来看个例子:<br>     <style><br>       .red{<br>         color: red;<br>       }<br>       .blue{<br>         color: blue;<br>       }<br>    </style><br>    <div class="blue red">请问字体是什么颜色？</div><br>这里面会是什么颜色?<br>答案:蓝色.因为最终的显示效果跟样式定义在文件中的先后顺序有关,既是后面的覆盖前面的,也就是.blue定义在.red后面,会将其颜色覆盖,与在class中的使用先后顺序无关.</p>
+<h3 id="IE-浏览器下载或者渲染的顺序可能如下："><a href="#IE-浏览器下载或者渲染的顺序可能如下：" class="headerlink" title="IE 浏览器下载或者渲染的顺序可能如下："></a>IE 浏览器下载或者渲染的顺序可能如下：</h3><p>● IE 下载的顺序是从上到下；</p>
+<p>● JavaScript 函数的执行会阻塞IE 的下载；</p>
+<p>● IE 渲染的顺序也是从上到下；</p>
+<p>● IE 的下载和渲染是同时进行的；</p>
+<p>● 在渲染到页面的某一部分时，其上面的所有部分都已经下载完成（但并不是说所有相关联的元素都已经下载完。）</p>
+<p>● 在下载过程中，如果遇到某一标签是嵌入文件，并且文件是具有语义解释性的（例如：JS脚本，CSS样式），那么此时IE的下载过程会启用单独连接进行下载。并且在下载后进行解析，如果JS、CSS中如有重定义，后面定义的函数将覆盖前面定义的函数。</p>
+<p>● 解析过程中，停止页面所有往下元素的下载。样式表文件比较特殊，在其下载完成后，将和以前下载的所有样式表一起进行解析，解析完成后，将对此前所有元素（含以前已经渲染的）重新进行样式渲染。并以此方式一直渲染下去，直到整个页面渲染完成。</p>
+<p>● Firefox 处理下载和渲染的顺序大体相同，只是在细微之处有些差别，例如：iframe 的渲染。</p>
+<p>以上内容部分自己手打,也有摘自其他文章,若有雷同,见谅.</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -184,171 +264,115 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/tomduanjingjing/2016/05/20/CSS中优先级的问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/19/CSS之margin的小性子/" class="archive-article-date">
-  	<time datetime="2016-05-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-19</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/tomdjj.github.io/2016/06/10/CSS的三种定位特性/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS的三种定位特性
+        
+      </div>
+    </a>
+  
+  
+    <a href="/tomdjj.github.io/2016/05/19/CSS之margin的小性子/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS之margin的小性子</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/19/CSS之margin的小性子/">CSS之margin的小性子</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/19/CSS中visibility属性中的值collapse/" class="archive-article-date">
-  	<time datetime="2016-05-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/19/CSS中visibility属性中的值collapse/">CSS中visibility属性中的值collapse</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/17/有关于标签li的问题/" class="archive-article-date">
-  	<time datetime="2016-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/17/有关于标签li的问题/">有关于标签li的问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/17/让盒子居中的四种方法/" class="archive-article-date">
-  	<time datetime="2016-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/17/让盒子居中的四种方法/">让盒子居中的四种方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -371,8 +395,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/tomduanjingjing">
-  <title>Archives: 2016/5 | Hexo</title>
+  <title>CSS浮动与清浮动 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://github.com/tomduanjingjing/archives/2016/05/index.html">
+  <meta name="description" content="CSS浮动与清浮动1.overflow 溢出会重新计算元素的空间overflow:hidden 溢出的隐藏 就是在指定的宽高内的内容如果溢出了则会被隐藏overflow:auto 溢出出现滚动条 就是指定的宽高内溢出了就会有滚动条出现方便看溢出部分overflow:scroll 出现滚动条 这个是没有溢出都会有滚动条出现">
+<meta name="keywords" content="-布局">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS浮动与清浮动">
+<meta property="og:url" content="https://github.com/tomduanjingjing/2016/06/10/CSS浮动与清浮动/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="CSS浮动与清浮动1.overflow 溢出会重新计算元素的空间overflow:hidden 溢出的隐藏 就是在指定的宽高内的内容如果溢出了则会被隐藏overflow:auto 溢出出现滚动条 就是指定的宽高内溢出了就会有滚动条出现方便看溢出部分overflow:scroll 出现滚动条 这个是没有溢出都会有滚动条出现">
+<meta property="og:updated_time" content="2017-11-25T01:49:29.550Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="CSS浮动与清浮动">
+<meta name="twitter:description" content="CSS浮动与清浮动1.overflow 溢出会重新计算元素的空间overflow:hidden 溢出的隐藏 就是在指定的宽高内的内容如果溢出了则会被隐藏overflow:auto 溢出出现滚动条 就是指定的宽高内溢出了就会有滚动条出现方便看溢出部分overflow:scroll 出现滚动条 这个是没有溢出都会有滚动条出现">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -143,36 +148,79 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS浮动与清浮动" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS浮动与清浮动
+    </h1>
+  
+
+        
+        <a href="/tomdjj.github.io/2016/06/10/CSS浮动与清浮动/" class="archive-article-date">
+  	<time datetime="2016-06-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-10</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="CSS浮动与清浮动"><a href="#CSS浮动与清浮动" class="headerlink" title="CSS浮动与清浮动"></a>CSS浮动与清浮动</h2><h3 id="1-overflow-溢出"><a href="#1-overflow-溢出" class="headerlink" title="1.overflow 溢出"></a>1.overflow 溢出</h3><p>会重新计算元素的空间<br>overflow:hidden 溢出的隐藏 就是在指定的宽高内的内容如果溢出了则会被隐藏<br>overflow:auto 溢出出现滚动条 就是指定的宽高内溢出了就会有滚动条出现方便看溢出部分<br>overflow:scroll 出现滚动条 这个是没有溢出都会有滚动条出现<br><a id="more"></a></p>
+<h3 id="2-元素的居中"><a href="#2-元素的居中" class="headerlink" title="2.元素的居中"></a>2.元素的居中</h3><p>margin:0 auto; 第一个是上下 第二个是左右 左右设置为自动则为居中</p>
+<h3 id="3-元素的伪类"><a href="#3-元素的伪类" class="headerlink" title="3.元素的伪类"></a>3.元素的伪类</h3><p>伪类：就是CSS一些元素身上的特殊属性<br>:hover 鼠标停留 即使鼠标停留在文字上面的时候<br>:after 在元素内容之后插入一些内容</p>
+<h3 id="浮动："><a href="#浮动：" class="headerlink" title="浮动："></a>浮动：</h3><p>其实就是使元素脱离文档流，按照一定的方式排列，遇到相邻的浮动元素或者父级的边界停下来</p>
+<h3 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h3><p>就是清浮动 就是用来处理浮动元素脱离文档流的问题</p>
+<h3 id="1-父级也浮动"><a href="#1-父级也浮动" class="headerlink" title="1.父级也浮动"></a>1.父级也浮动</h3><p>弊端：左右的margin:0 auto; 会失效</p>
+<h3 id="2-父级加display-inline-block"><a href="#2-父级加display-inline-block" class="headerlink" title="2.父级加display:inline-block;"></a>2.父级加display:inline-block;</h3><p>弊端：左右的margin:0 auto; 会失效<br>{如果需要让元素居中，可以给父级加text-align:center;}</p>
+<h3 id="3-给父级加高"><a href="#3-给父级加高" class="headerlink" title="3.给父级加高"></a>3.给父级加高</h3><p>弊端：扩展性不好</p>
+<h3 id="4-br标签"><a href="#4-br标签" class="headerlink" title="4.br标签"></a>4.br标签</h3><p>写法：<br>作用：换行</p>
+<h3 id="5-clear"><a href="#5-clear" class="headerlink" title="5.clear"></a>5.clear</h3><p>clear 元素的某一方向不允许出现其他的浮动元素<br>left<br>right<br>both (推荐使用)<br>one<br>温馨小提示：<br>4 5 都是不符合W3C规范 违反结构 样式 行为 三者分离原则</p>
+<h3 id="6-伪类清浮动"><a href="#6-伪类清浮动" class="headerlink" title="6.伪类清浮动"></a>6.伪类清浮动</h3><p>:after{<br>content:””;display: block;clear: both;<br>}<br>温馨提示:目前主流方法 ，建议使用</p>
+<p>清除浮动是每一个 web前台设计师必须掌握的机能。css清除浮动大全，共8种方法。</p>
+<p>浮动会使当前标签产生向上浮的效果，同时会影响到前后标签、父级标签的位置及 width height 属性。而且同样的代码，在各种浏览器中显示效果也有可能不相同，这样让清除浮动更难了。解决浮动引起的问题有多种方法，但有些方法在浏览器兼容性方面还有问题。</p>
+<p>下面总结8种清除浮动的方法（测试已通过 ie chrome firefox opera，后面三种方法只做了解就可以了）：</p>
+<h2 id="1，父级div定义-height"><a href="#1，父级div定义-height" class="headerlink" title="1，父级div定义 height"></a>1，父级div定义 height</h2><p>复制代码代码如下:<br>    <style type="text/css"><br>    .div1{background:#000080;border:1px solid red;/<em>解决代码</em>/height:200px;}<br>    .div2{background:#800080;border:1px solid red;height:100px;margin-top:10px}<br>    .left{float:left;width:20%;height:200px;background:#DDD}<br>    .right{float:right;width:30%;height:80px;background:#DDD}<br>    </style><br>    <div class="div1"><br>    <div class="left">Left</div><br>    <div class="right">Right</div><br>    </div><br>    <div class="div2"><br>    div2<br>    </div><br>原理：父级div手动定义height，就解决了父级div无法自动获取到高度的问题。</p>
+<p>优点：简单、代码少、容易掌握</p>
+<p>缺点：只适合高度固定的布局，要给出精确的高度，如果高度和父级div不一样时，会产生问题</p>
+<p>建议：不推荐使用，只建议高度固定的布局时使用</p>
+<h2 id="2，结尾处加空div标签-clear-both"><a href="#2，结尾处加空div标签-clear-both" class="headerlink" title="2，结尾处加空div标签 clear:both"></a>2，结尾处加空div标签 clear:both</h2><p>复制代码代码如下:<br>    <style type="text/css"><br>    .div1{background:#000080;border:1px solid red}<br>    .div2{background:#800080;border:1px solid red;height:100px;margin-top:10px}<br>    .left{float:left;width:20%;height:200px;background:#DDD}<br>    .right{float:right;width:30%;height:80px;background:#DDD}<br>    /<em>清除浮动代码</em>/<br>    .clearfloat{clear:both}<br>    </style><br>    <div class="div1"><br>    <div class="left">Left</div><br>    <div class="right">Right</div><br>    <div class="clearfloat"></div><br>    </div><br>    <div class="div2"><br>    div2<br>    </div><br>原理：添加一个空div，利用css提高的clear:both清除浮动，让父级div能自动获取到高度</p>
+<p>优点：简单、代码少、浏览器支持好、不容易出现怪问题</p>
+<p>缺点：不少初学者不理解原理；如果页面浮动布局多，就要增加很多空div，让人感觉很不好</p>
+<p>建议：不推荐使用，但此方法是以前主要使用的一种清除浮动方法</p>
+<h2 id="3，父级div定义-伪类-after-和-zoom"><a href="#3，父级div定义-伪类-after-和-zoom" class="headerlink" title="3，父级div定义 伪类:after 和 zoom"></a>3，父级div定义 伪类:after 和 zoom</h2><p>复制代码代码如下:<br>    <style type="text/css"><br>    .div1{background:#000080;border:1px solid red;}<br>    .div2{background:#800080;border:1px solid red;height:100px;margin-top:10px}<br>    .left{float:left;width:20%;height:200px;background:#DDD}<br>    .right{float:right;width:30%;height:80px;background:#DDD}<br>    /<em>清除浮动代码</em>/<br>    .clearfloat:after{display:block;clear:both;content:””;visibility:hidden;height:0}<br>    .clearfloat{zoom:1}<br>    </style><br>    <div class="div1 clearfloat"><br>    <div class="left">Left</div><br>    <div class="right">Right</div><br>    </div><br>    <div class="div2"><br>    div2<br>    </div><br>原理：IE8以上和非IE浏览器才支持:after，原理和方法2有点类似，zoom(IE转有属性)可解决ie6,ie7浮动问题</p>
+<p>优点：浏览器支持好、不容易出现怪问题（目前：大型网站都有使用，如：腾迅，网易，新浪等等）</p>
+<p>缺点：代码多、不少初学者不理解原理，要两句代码结合使用才能让主流浏览器都支持。</p>
+<p>建议：推荐使用，建议定义公共类，以减少CSS代码。</p>
+<h2 id="4，父级div定义-overflow-hidden"><a href="#4，父级div定义-overflow-hidden" class="headerlink" title="4，父级div定义 overflow:hidden"></a>4，父级div定义 overflow:hidden</h2><p>复制代码代码如下:<br>    <style type="text/css"><br>    .div1{background:#000080;border:1px solid red;/<em>解决代码</em>/width:98%;overflow:hidden}<br>    .div2{background:#800080;border:1px solid red;height:100px;margin-top:10px;width:98%}<br>    .left{float:left;width:20%;height:200px;background:#DDD}<br>    .right{float:right;width:30%;height:80px;background:#DDD}<br>    </style><br>    <div class="div1"><br>    <div class="left">Left</div><br>    <div class="right">Right</div><br>    </div><br>    <div class="div2"><br>    div2<br>    </div><br>原理：必须定义width或zoom:1，同时不能定义height，使用overflow:hidden时，浏览器会自动检查浮动区域的高度</p>
+<p>优点：简单、代码少、浏览器支持好</p>
+<p>缺点：不能和position配合使用，因为超出的尺寸的会被隐藏。</p>
+<p>建议：只推荐没有使用position或对overflow:hidden理解比较深的朋友使用。</p>
+<h2 id="5，父级div定义-overflow-auto"><a href="#5，父级div定义-overflow-auto" class="headerlink" title="5，父级div定义 overflow:auto"></a>5，父级div定义 overflow:auto</h2><p>复制代码代码如下:<br>    <style type="text/css"><br>    .div1{background:#000080;border:1px solid red;/<em>解决代码</em>/width:98%;overflow:auto}<br>    .div2{background:#800080;border:1px solid red;height:100px;margin-top:10px;width:98%}<br>    .left{float:left;width:20%;height:200px;background:#DDD}<br>    .right{float:right;width:30%;height:80px;background:#DDD}<br>    </style><br>    <div class="div1"><br>    <div class="left">Left</div><br>    <div class="right">Right</div><br>    </div><br>    <div class="div2"><br>    div2<br>    </div><br>原理：必须定义width或zoom:1，同时不能定义height，使用overflow:auto时，浏览器会自动检查浮动区域的高度</p>
+<p>优点：简单、代码少、浏览器支持好</p>
+<p>缺点：内部宽高超过父级div时，会出现滚动条。</p>
+<p>建议：不推荐使用，如果你需要出现滚动条或者确保你的代码不会出现滚动条就使用吧。</p>
+<h2 id="6，父级div-也一起浮动"><a href="#6，父级div-也一起浮动" class="headerlink" title="6，父级div 也一起浮动"></a>6，父级div 也一起浮动</h2><p>复制代码代码如下:<br>    <style type="text/css"><br>    .div1{background:#000080;border:1px solid red;/<em>解决代码</em>/width:98%;margin-bottom:10px;float:left}<br>    .div2{background:#800080;border:1px solid red;height:100px;width:98%;/<em>解决代码</em>/clear:both}<br>    .left{float:left;width:20%;height:200px;background:#DDD}<br>    .right{float:right;width:30%;height:80px;background:#DDD}<br>    </style><br>    <div class="div1"><br>    <div class="left">Left</div><br>    <div class="right">Right</div><br>    </div><br>    <div class="div2"><br>    div2<br>    </div><br>原理：所有代码一起浮动，就变成了一个整体</p>
+<p>优点：没有优点</p>
+<p>缺点：会产生新的浮动问题。</p>
+<p>建议：不推荐使用，只作了解。</p>
+<h2 id="7，父级div定义-display-table"><a href="#7，父级div定义-display-table" class="headerlink" title="7，父级div定义 display:table"></a>7，父级div定义 display:table</h2><p>复制代码代码如下:</p>
+<p><style type="text/css"><br>    .div1{background:#000080;border:1px solid red;/<em>解决代码</em>/width:98%;display:table;margin-bottom:10px;}<br>    .div2{background:#800080;border:1px solid red;height:100px;width:98%;}<br>    .left{float:left;width:20%;height:200px;background:#DDD}<br>    .right{float:right;width:30%;height:80px;background:#DDD}<br>    </style><br>    <div class="div1"><br>    <div class="left">Left</div><br>    <div class="right">Right</div><br>    </div><br>    <div class="div2"><br>    div2<br>    </div><br>原理：将div属性变成表格</p>
+<p>优点：没有优点</p>
+<p>缺点：会产生新的未知问题。</p>
+<p>建议：不推荐使用，只作了解。</p>
+<h2 id="8，结尾处加-br标签-clear-both"><a href="#8，结尾处加-br标签-clear-both" class="headerlink" title="8，结尾处加 br标签 clear:both"></a>8，结尾处加 br标签 clear:both</h2><p>复制代码代码如下:<br>    <style type="text/css"><br>    .div1{background:#000080;border:1px solid red;margin-bottom:10px;zoom:1}<br>    .div2{background:#800080;border:1px solid red;height:100px}<br>    .left{float:left;width:20%;height:200px;background:#DDD}<br>    .right{float:right;width:30%;height:80px;background:#DDD}<br>    .clearfloat{clear:both}<br>    </style><br>    <div class="div1"><br>    <div class="left">Left</div><br>    <div class="right">Right</div><br>    <br class="clearfloat"><br>    </div><br>    <div class="div2"><br>    div2<br>    </div><br>原理：父级div定义zoom:1来解决IE浮动问题，结尾处加 br标签 clear:both</p>
+<p>建议：不推荐使用，只作了解。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/tomdjj.github.io/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/20/CSS中优先级的问题/" class="archive-article-date">
-  	<time datetime="2016-05-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/20/CSS中优先级的问题/">CSS中优先级的问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -184,171 +232,115 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/tomduanjingjing/2016/06/10/CSS浮动与清浮动/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/19/CSS之margin的小性子/" class="archive-article-date">
-  	<time datetime="2016-05-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-19</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/tomdjj.github.io/2016/06/20/CSS3变形与动画/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS3变形与动画
+        
+      </div>
+    </a>
+  
+  
+    <a href="/tomdjj.github.io/2016/06/10/CSS的三种定位特性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS的三种定位特性</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/19/CSS之margin的小性子/">CSS之margin的小性子</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/19/CSS中visibility属性中的值collapse/" class="archive-article-date">
-  	<time datetime="2016-05-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/19/CSS中visibility属性中的值collapse/">CSS中visibility属性中的值collapse</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/17/有关于标签li的问题/" class="archive-article-date">
-  	<time datetime="2016-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/17/有关于标签li的问题/">有关于标签li的问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/tomdjj.github.io/2016/05/17/让盒子居中的四种方法/" class="archive-article-date">
-  	<time datetime="2016-05-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/tomdjj.github.io/2016/05/17/让盒子居中的四种方法/">让盒子居中的四种方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-布局</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -371,8 +363,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
