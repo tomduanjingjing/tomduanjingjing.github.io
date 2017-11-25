@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://github.com/tomduanjingjing/2016/07/27/h5表单新属性/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="h5表单新属性novalidate不验证表单,用于form标签,还以用于input,type属性url,email,tel.. input新属性autocomplete  输入框的自动补全； autofocus       页面加载完毕后自动获取焦点；">
-<meta property="og:updated_time" content="2017-11-25T02:18:09.072Z">
+<meta property="og:updated_time" content="2017-11-25T05:22:25.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="h5表单新属性">
 <meta name="twitter:description" content="h5表单新属性novalidate不验证表单,用于form标签,还以用于input,type属性url,email,tel.. input新属性autocomplete  输入框的自动补全； autofocus       页面加载完毕后自动获取焦点；">
@@ -50,7 +50,7 @@
 			<img src="img/jing.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">John Doe</a></h1>
+		  <h1 class="header-author"><a href="">Duan JJ</a></h1>
 		</hgroup>
 		
 
@@ -104,7 +104,7 @@
 				<img src="img/jing.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">Duan JJ</h1>
 			</hgroup>
 			
 			
@@ -171,22 +171,22 @@
         <h2 id="h5表单新属性"><a href="#h5表单新属性" class="headerlink" title="h5表单新属性"></a>h5表单新属性</h2><h4 id="novalidate"><a href="#novalidate" class="headerlink" title="novalidate"></a>novalidate</h4><p>不验证表单,用于form标签,还以用于input,type属性url,email,tel..</p>
 <h3 id="input新属性"><a href="#input新属性" class="headerlink" title="input新属性"></a>input新属性</h3><p>autocomplete  输入框的自动补全；</p>
 <p>autofocus       页面加载完毕后自动获取焦点；<br><a id="more"></a><br>form          指定输入框属于那一个表单，输入框不在<form>内部也会进行提交；</form></p>
-<p>multiple       文件选择框为多选；(<input type="’file’" multiple>)</p>
+<p>multiple       文件选择框为多选；(<code>&lt;input type=’file’ multiple&gt;</code>)</p>
 <p>pattern       输入框验证的正则表达式;  [0-9]{6} 输入0-9直接的字符，并且字符串长度为6位。</p>
 <p>placeholder    输入框提示，描述输入域所期待的值；</p>
 <p>required      输入框是否是必填项；    </p>
-<p>formnovalidate   设置给提交按钮可以跳过浏览器表单验证（input type=’submit’ formonvalidate）</p>
+<p>formnovalidate   设置给提交按钮可以跳过浏览器表单验证（<code>input type=’submit’ formonvalidate</code>）</p>
 <h3 id="aria-增加可访问性"><a href="#aria-增加可访问性" class="headerlink" title="aria-* 增加可访问性"></a>aria-* 增加可访问性</h3><p>在构建Web应用时，我们必须确保所有用户都能访问，这其中就包括那些需要辅助技术（屏幕阅读器）才能访问的用户（盲人或残障人士）。</p>
 <p>现在应用结构越发复杂，除了面屏的html标签外，还有漫天飞舞的CSS和JS，要想迎合辅助技术的难度越发增大。为了解决这个问题，人们制定了WAI（Web Accessibility Initiative，Web可访问性倡议）和ARIA标准及规范。</p>
 <p>WAI-ARIA规范旨在通过对HTML文档作者提供的可访问性信息加以扩展来改善Web应用。ARIA角色、关系、状态及属性，可为Web应用定义出能够被屏幕阅读器这样的辅助技术所理解的工作方式。例如：</p>
-<p>可视化设备：用户名：<br>    <input type="’username’" name="’username’"><br>（闭上眼睛，内容对于你而言是不可见的，但可以通过辅助设备读取出来给你听，当鼠标移入到input输入框的时候，辅助设备就会获取aria-label的值读给听.）<br>可视化设备：<br>    <div class="’button" disabled’="">点我哥哥</div><br>屏幕阅读设备：<br>    <div class="’button" disabled’="" role="’button’" aria-disabled="’true’">点我哥哥</div><br>HTML5规范现已明确声明，可以按照ARIA规范所描述的那样，在HTML元素上使用ARIA的role和aria-*属性。常见角色有：<br>    button,checkbox,menuitem,menuitemcheckbox,menuitemradio,tab或treeitem。</p>
+<p>可视化设备：用户名：<br>    <code>&lt;input type=’username’ name=’username’ /&gt;</code><br>（闭上眼睛，内容对于你而言是不可见的，但可以通过辅助设备读取出来给你听，当鼠标移入到input输入框的时候，辅助设备就会获取aria-label的值读给听.）<br>可视化设备：<br>    <code>&lt;div class=’button disabled’&gt;点我哥哥&lt;/div&gt;</code><br>屏幕阅读设备：<br>    <code>&lt;div class=’button disabled’ role=’button’ aria-disabled=’true’&gt;点我哥哥&lt;/div&gt;</code><br>HTML5规范现已明确声明，可以按照ARIA规范所描述的那样，在HTML元素上使用ARIA的role和aria-*属性。常见角色有：<br>    button,checkbox,menuitem,menuitemcheckbox,menuitemradio,tab或treeitem。</p>
 <h3 id="data-自定义数据"><a href="#data-自定义数据" class="headerlink" title="data-* 自定义数据"></a>data-* 自定义数据</h3><p>data-*是一种以“键（key）/值（value）”对方式来描述HTML TAG的扩展属性。</p>
 <pre><code>&lt;div data-name=”张三疯”&gt;&lt;/div&gt;
 </code></pre><p>以前在TAG上定义一个属性，直接写上后，很多人都无法区分是否是原生属性（这会影响到取值问题）.在HTML5中添加了data-*的方式来自定义属性，语法：<br>    &lt;标签 data-键=值 data-键=值 /&gt;<br>js取值:el.dataset[键]    </p>
 <h3 id="contenteditable-内容编辑"><a href="#contenteditable-内容编辑" class="headerlink" title="contenteditable 内容编辑"></a>contenteditable 内容编辑</h3><p>contentEditable：属性可以打开某些元素（一般为双标签）编辑标签中内容。</p>
 <p>HTML代码方式设置<br>     <html contenteditable=""><br>    …..<br>    </html><br>或者某个具体的标签<br>        <div id="’text’" contenteditable="" style="’border:1px" solid="" red;height:300px’=""><br>    </div><br>JS编码方式设置</p>
 <p>document.body.contentEditable = true ; // 默认为false<br>该属性可以让我们在线编辑网页内容，虽然看似很牛逼的一个属性，但是我们实际开发中，并不会使用，一般直接使用第三方的在线编辑器插件即可。</p>
-<h3 id="tabIndex-tab键控制"><a href="#tabIndex-tab键控制" class="headerlink" title="tabIndex tab键控制"></a>tabIndex tab键控制</h3><p>tabIndex虽然是HTML5新属性， 其实在HTML4就已经存在了，其功能提高了用户体验。tab键可以控制窗口或页面中获取焦点，设置tabIndex可以控制tab键获取焦点的元素。<br>    <form><br>    <input type="text" name="username" id="" tabindex="1"><br>    <a href="www.baidu.com" tabindex="-1">注册账号</a><br>    <input type="password" name="password" tabindex="2"><br>    </form></p>
+<h3 id="tabIndex-tab键控制"><a href="#tabIndex-tab键控制" class="headerlink" title="tabIndex tab键控制"></a>tabIndex tab键控制</h3><p>tabIndex虽然是HTML5新属性， 其实在HTML4就已经存在了，其功能提高了用户体验。tab键可以控制窗口或页面中获取焦点，设置tabIndex可以控制tab键获取焦点的元素。<br>    <form><br>    <code>&lt;input type=&quot;text&quot; name=&quot;username&quot; id=&quot;&quot; tabindex=&quot;1&quot; /&gt;</code><br>    <a href="www.baidu.com" tabindex="-1">注册账号</a><br>   <code>&lt;input type=&quot;password&quot; name=&quot;password&quot; tabindex=&quot;2&quot; /&gt;</code><br>    </form></p>
 <h3 id="rel链接关系"><a href="#rel链接关系" class="headerlink" title="rel链接关系"></a>rel链接关系</h3><p>rel 属性指定链接的关系，常见如下：</p>
 <p>link rel=”stylesheet” // css样式引入<br>a rel=”nofellow” //SEO优化</p>
 <p>rel=same表示待链接的文件与此文件相同，rel=next表示待链接的文件为下一页，rel＝parent表示本文件为待链接文件的父文件，rel=previous则表示待链接的文件为上一页。<br>    <link rel="stylesheet" href="style.css"><br>    <link rel="shortcut icon" href="favicon.ico"><br>    …</p>
@@ -341,7 +341,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 John Doe
+    		&copy; 2017 Duan JJ
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
